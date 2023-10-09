@@ -57,9 +57,6 @@ const Login = ({loggedInState, loggedInStates,setLoggedInState})=>{
                style={styles.sendButton}
               onPress={async ()=>{
                 console.log(phoneNumber+' Button was pressed')
-                
-                // This is the new line to show the Hello message with the phone number
-                  Alert.alert(`Hello ${phoneNumber}`);
     
                 const sendTextResponse=await fetch(
                   'https://dev.stedi.me/twofactorlogin/'+phoneNumber,
@@ -69,13 +66,13 @@ const Login = ({loggedInState, loggedInStates,setLoggedInState})=>{
                      'content-type':'application/text'
                    }
                   }
-                )
-                const sendTextResponseData = await sendTextResponse.text();
-                if(sendTextResponse.status!=200){//invalid phone number, send them to the signup page
-                  await Alert.alert("Did you type your number correctly? "+phoneNumber);
-                } else{
-                  setLoggedInState(loggedInStates.LOGGING_IN);
-                }
+                  );
+                  const sendTextResponseData = await sendTextResponse.text();
+                  if(sendTextResponse.status!=200){//invalid phone number, send them to the signup page
+                    await Alert.alert("Did you type your number correctly? " + phoneNumber);
+                  } else{
+                    setLoggedInState(loggedInStates.LOGGING_IN);
+                  }
               }}
             >
               <Text style={{color:'white'}}>Send</Text>      
