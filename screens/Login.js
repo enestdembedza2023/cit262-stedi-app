@@ -58,7 +58,7 @@ const Login = ({loggedInState, loggedInStates,setLoggedInState})=>{
               onPress={async ()=>{
                 console.log(phoneNumber+' Button was pressed')
 
-              // This is the new line to show the Hello message with the name
+              // This is the new line to show the Hello message with the Name
                    Alert.alert(`Hello ${phoneNumber}`);
 
                 const sendTextResponse=await fetch(
