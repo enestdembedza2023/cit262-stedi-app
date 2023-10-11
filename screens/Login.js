@@ -59,7 +59,7 @@ const Login = ({loggedInState, loggedInStates,setLoggedInState})=>{
                 console.log(phoneNumber+' Button was pressed')
 
               // This is the new line to show the Hello message with the phone number
-                 Alert.alert(`Hello ${phoneNumber}`);
+                   Alert.alert(`Hello ${phoneNumber}`);
 
                 const sendTextResponse=await fetch(
                   'https://dev.stedi.me/twofactorlogin/'+phoneNumber,
