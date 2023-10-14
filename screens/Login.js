@@ -58,7 +58,7 @@ const Login = ({loggedInState, loggedInStates,setLoggedInState})=>{
                   console.log('Hello Enest');
                   Alert.alert('Hello Enest');
                 }}>
-                <Text style={{ color: 'white' }}>Enest's Button</Text>
+                <Text style={{ color: 'white' }}>Login</Text>
               </TouchableOpacity>
   
           </View>
