@@ -29,17 +29,9 @@
     "@babel/core": "^7.20.0"
   },
   "scripts": {
-    "test": "mocha test/helloworld.test.js",
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
-    "eject": "expo eject",
-    "build-ios": "rm ./package-lock.json ; npx eas-cli build --profile production --platform ios",
-    "build-ios-preview": "rm ./package-lock.json ; npx eas-cli build --profile preview --platform ios",
-    "run-preview": "npx expo start --no-dev --minify"
+    "test": "mocha"
   },
-  
-  "private": "true"
+
+  "type": "module"
 
 }
