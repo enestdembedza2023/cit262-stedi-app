@@ -1,4 +1,5 @@
 {
+    // Test credentials for curl; NOT for production use
     "userName":"enestdembedza@outlook.com",
     "password":"27184980q27Q@&"
 }
